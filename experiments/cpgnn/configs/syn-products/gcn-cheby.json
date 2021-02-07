@@ -1,0 +1,15 @@
+{
+
+    "model_args": [
+       "--model gcn_cheby --hidden1 64 --weight_decay 5e-4 --max_degree 2 --early_stopping 40 --no_feature_normalize"
+    ],
+    "exp_regex": "ogbn_products-2ff3547fdd0277c1c5bf61f91b2f3b25",
+    "arg_regex": "",
+
+    "graph_filter_dict": {
+        "numNode": 10000,
+        "$or": [
+            {"method.$in": ["mixhop"]}
+        ]
+    }
+}

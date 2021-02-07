@@ -1,0 +1,17 @@
+{
+
+    "model_args": [
+        "CPGNN --network_setup GGM64-VS-R-G-GMO-VS-E-BP1 --adj_nhood 0 1 2 --cotrain_weight 1 --adj_normalize CHEBY --use_best_val_belief",
+        "CPGNN --network_setup GGM64-VS-R-G-GMO-VS-E-BP2 --adj_nhood 0 1 2 --cotrain_weight 1 --adj_normalize CHEBY --use_best_val_belief"
+    ],
+    "exp_regex": "unmodified-0\\.10p__0\\.8p",
+    "arg_regex": "",
+
+    "graph_filter_dict": {
+        "benchmark": true,
+        "$or": [
+            {"method.$in": ["planetoid", "GeomGCN"]}
+        ],
+        "datasetName.$in": ["ind.citeseer", "ind.pubmed", "ind.cora", "texas", "squirrel", "chameleon"]
+    }
+}

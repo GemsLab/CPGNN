@@ -1,0 +1,18 @@
+{
+
+    "model_args": [
+       "--model gcn --hidden1 64 --early_stopping 40 --identity_feature",
+       "--model gcn --hidden1 64 --early_stopping 100 --identity_feature",
+       "--model gcn --hidden1 64 --early_stopping 200 --identity_feature"
+    ],
+    "exp_regex": "unmodified-0\\.48p__0\\.2p",
+    "arg_regex": "",
+    
+    "graph_filter_dict": {
+        "benchmark": true,
+        "$or": [
+            {"method.$in": ["planetoid", "GeomGCN"]}
+        ],
+        "datasetName.$in": ["ind.citeseer", "ind.pubmed", "ind.cora", "texas", "squirrel", "chameleon"]
+    }
+}

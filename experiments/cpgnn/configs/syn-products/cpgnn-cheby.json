@@ -1,0 +1,16 @@
+{
+
+    "model_args": [
+        "CPGNN --network_setup GGM64-VS-R-G-GMO-VS-E-BP1 --adj_nhood 0 1 2 --cotrain_weight 1 --adj_normalize CHEBY --use_best_val_belief --no_feature_normalize",
+        "CPGNN --network_setup GGM64-VS-R-G-GMO-VS-E-BP2 --adj_nhood 0 1 2 --cotrain_weight 1 --adj_normalize CHEBY --use_best_val_belief --no_feature_normalize"
+    ],
+    "exp_regex": "ogbn_products-2ff3547fdd0277c1c5bf61f91b2f3b25",
+    "arg_regex": "",
+
+    "graph_filter_dict": {
+        "numNode": 10000,
+        "$or": [
+            {"method.$in": ["mixhop"]}
+        ]
+    }
+}

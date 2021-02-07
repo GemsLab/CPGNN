@@ -1,0 +1,16 @@
+{
+
+    "model_args": [
+        "--adj_pows=0,1,2 --hidden_dims_csv 64 --retrain"
+    ],
+    "exp_regex": "unmodified-0\\.10p__0\\.8p",
+    "arg_regex": "",
+
+    "graph_filter_dict": {
+        "benchmark": true,
+        "$or": [
+            {"method.$in": ["planetoid", "GeomGCN"]}
+        ],
+        "datasetName.$in": ["ind.citeseer", "ind.pubmed", "ind.cora", "texas", "squirrel", "chameleon"]
+    }
+}

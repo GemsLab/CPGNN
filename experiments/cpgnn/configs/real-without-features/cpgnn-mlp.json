@@ -1,0 +1,17 @@
+{
+
+    "model_args": [
+        "CPGNN --network_setup M64-R-MO-E-BP1 --feature_configs identity",
+        "CPGNN --network_setup M64-R-MO-E-BP2 --feature_configs identity"
+    ],
+    "exp_regex": "unmodified-0\\.48p__0\\.2p",
+    "arg_regex": "",
+
+    "graph_filter_dict": {
+        "benchmark": true,
+        "$or": [
+            {"method.$in": ["planetoid", "GeomGCN"]}
+        ],
+        "datasetName.$in": ["ind.citeseer", "ind.pubmed", "ind.cora", "texas", "squirrel", "chameleon"]
+    }
+}

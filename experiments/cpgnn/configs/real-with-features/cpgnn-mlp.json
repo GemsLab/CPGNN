@@ -1,0 +1,20 @@
+{
+
+    "model_args": [
+        "CPGNN --network_setup M64-D-R-MO-E-BP1 --use_best_val_belief",
+        "CPGNN --network_setup M64-R-MO-E-BP1 --use_best_val_belief",
+
+        "CPGNN --network_setup M64-D-R-MO-E-BP2 --use_best_val_belief",
+        "CPGNN --network_setup M64-R-MO-E-BP2 --use_best_val_belief"
+    ],
+    "exp_regex": "unmodified-0\\.10p__0\\.8p",
+    "arg_regex": "",
+
+    "graph_filter_dict": {
+        "benchmark": true,
+        "$or": [
+            {"method.$in": ["planetoid", "GeomGCN"]}
+        ],
+        "datasetName.$in": ["ind.citeseer", "ind.pubmed", "ind.cora", "texas", "squirrel", "chameleon"]
+    }
+}

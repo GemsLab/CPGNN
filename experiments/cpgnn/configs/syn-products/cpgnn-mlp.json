@@ -1,0 +1,16 @@
+{
+
+    "model_args": [
+        "CPGNN --network_setup M64-R-MO-E-BP1 --no_feature_normalize --use_best_val_belief",
+        "CPGNN --network_setup M64-R-MO-E-BP2 --no_feature_normalize --use_best_val_belief"
+    ],
+    "exp_regex": "ogbn_products-2ff3547fdd0277c1c5bf61f91b2f3b25",
+    "arg_regex": "",
+
+    "graph_filter_dict": {
+        "numNode": 10000,
+        "$or": [
+            {"method.$in": ["mixhop"]}
+        ]
+    }
+}
