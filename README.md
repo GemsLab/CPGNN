@@ -161,12 +161,13 @@ Please contact Jiong Zhu (jiongzhu@umich.edu) in case you have any questions.
 Please cite our paper if you make use of this code in your own work:
 
 ```bibtex
-@article{zhu2020graph,
+@inproceedings{zhu2021graph,
   title={Graph Neural Networks with Heterophily},
   author={Zhu, Jiong and Rossi, Ryan A and Rao, Anup and Mai, Tung and Lipka, Nedim and Ahmed, Nesreen K and Koutra, Danai},
-  journal={arXiv preprint arXiv:2009.13566},
-  year={2020}
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={35},
+  number={12},
+  pages={11168--11176},
+  year={2021}
 }
 ```
-
-(We will update the BibTeX upon publication of the final AAAI camera-ready version.)
